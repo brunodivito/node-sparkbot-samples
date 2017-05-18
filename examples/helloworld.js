@@ -54,7 +54,7 @@ bot.onCommand("fallback", function (command) {
 //
 bot.onCommand("hello", function (command) {
     var email = command.message.personEmail; // Spark User that created the message orginally 
-    spark.createMessage(command.message.roomId, "Hello <@personEmail:" + email + ">", { "markdown":true }, function(err, message) {
+    spark.createMessage(command.message.roomId, "A big kiss <@personEmail:" + email + ">", { "markdown":true }, function(err, message) {
         if (err) {
             console.log("WARNING: could not post Hello message to room: " + command.message.roomId);
             return;
